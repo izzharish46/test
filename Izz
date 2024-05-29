@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Year Project Evaluation Form</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+   img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} 
+form {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+table, th, td {
+  border: 1px solid rgb(198, 198, 198);
+  border-collapse: collapse;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  padding: 20px 40px;
+  background-color: #8304FA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #45a049;
+}
+
+
+#marks th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #8304FA;
+  color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+/* Increase height of the specific table row */
+#formf tr.final-year-row {
+        height: 100px; /* Adjust the height as needed */
+    }
+
+    /* Set font size for the "Final Year Evaluation Form" header */
+#formf th[colspan="3"] {
+        font-size: 30px;
+    }
+
+    
+    
+    
+    </style>
+
+
+<body>
+    <img src = "psp.png "  style="width:20%;">
+    <form id = "fyp" action = "detail.php" method = "post">
+        <div> 
+            
+                <table id="formf" width ="95%" border="1" align = "center" style ="background-color : #F8C1EF3;">
+                <tr class="final-year-row">
+                  <th colspan = "3" bgcolor="#8304FA">Final Year Project Evaluation Form</th>  
+                <tr>
+            <th width="10%" align="left">Project ID: </th>
+            <td><input type="text" name="id"  style="width: 550px;" required ></td>
+        </tr>
+        <tr>
+            <th  align="left">Project Title: </th>
+            <td><input type="text" name="title"  style="width: 550px;" required></td>
+        </tr>
+        <tr>
+        <th  align="left">Department: </th>
+        <td>  <select name="cars" id="cars">
+        <option value="select">----select----</option>
+    <option value="jtmk">JTMK</option>
+    <option value="jke">JKE</option>
+    <option value="jkm">JKM</option>
+    <option value="jp">JP</option>
+    required </select>  </td>
+    <tr>
+            <th width="10%" align="left">SuperVisor's Name: </th>
+            <td><input type="text" name="supervisor"  style="width: 550px;" required pattern="[A-Za-z\s]+"></td>
+        </tr>
+        <tr>
+            <th width="10%" align="left">Jury's Name: </th>
+            <td><input type="text" name="jury"  style="width: 550px;" required pattern="[A-Za-z\s]+"></td>
+        </tr>
+        <tr>
+            <th  align="left">Date: </th>
+            <td><input type="date" name="date" hint="date" style="width: 150px;" required min="2023-01-01" max="2030-12-31"></td>
+        </tr>
+</table>
+</div>
+<br>
+
+<table id="marks" width ="95%" border="1" align = "center" style ="background-color : #F8C1EF3;">
+<tr>
+    <th>Evaluation Criteria</th>
+    <th>Full Marks</th>
+    <th>Given Marks</th>
+  </tr>
+  <tr>
+    <td>Novelty and Design</td>
+    <td>(/5)*25%</td>
+    <td>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>1
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">2
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"> 3
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"> 4
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"> 5
+    </label></td>
+  </tr>
+  <tr>
+    <td>Practically and Usabillity</td>
+    <td>(/5)*25%</td>
+    <td>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>1
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">2
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"> 3
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"> 4
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"> 5
+    </label></td>
+  </tr> 
+  <tr>
+    <td>Impact</td>
+    <td>(/5)*20%</td>
+    <td>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>1
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" required>2
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 3
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 4
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 5
+    </label></td>
+  </tr>
+  <tr>
+    <td>Presentation</td>
+    <td>(/5)*15%</td>
+    <td>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>1
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" required>2
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 3
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 4
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 5
+    </label></td>
+  </tr>
+  <tr>
+    <td>Video</td>
+    <td>(/5)*15%</td>
+    <td>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked>1
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" required>2
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 3
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 4
+    </label> 
+    <label class="radio-inline">
+      <input type="radio" name="optradio"required> 5
+    </label></td>
+  </tr>
+</table>
+</div>
+<br>
+<br>
+
+  <div class="btn" align="center">
+      <button type="submit" value="Submit">Submit</button>
+      <button type="reset" value="Clear" onclick="clearForm()">Clear</button>
+  </div>
+</form>
+</body>
+</html>
